@@ -3,60 +3,229 @@
       padding: 0;
   }
   
+  html,
   body,
   .container {
-      height: 100%;
       width: 100%;
       position: relative;
       min-height: 600px;
       min-width: 810px;
-      background: #ffffff;
+      background: #fff;
+      padding-bottom: 10px;
   }
   /*header*/
+  
   .header {
-      height: 70px;
+      height: 35px;
+      border-bottom: 1px solid #e4e4e4;
+      position: relative;
+  }
+  
+  .header .left {
+      float: left;
+      list-style-type: none;
+      margin-top: 5px;
+      position: relative;
   }
   
   .header .first {
-      margin-top: 15px;
-      margin-right: 10px;
+      margin-top: 5px;
+      /*margin-right: 10px;*/
       float: right;
       list-style-type: none;
   }
   
-  .header .first li {
+  .header>ul>li {
       padding-left: 15px;
       display: inline-block;
       font-size: 13px;
       font-weight: bold;
+      line-height: 30px;
+      position: relative;
   }
   
-  .header .first li a:link,
-  .header .first li a:visited {
-      color: #333333;
+  .header a:link,
+  .header li a:visited {
+      color: #333;
+  }
+  /*从这里开始时导航栏，点击或移动而展现出来的样式～～～*/
+  
+  .msg {
+      position: absolute;
+      top: 30px;
+      left: 10px;
+      font-size: 12px;
+      color: #333;
+      z-index: 999;
+      text-align: center;
+      border: 1px solid #e4e4e4;
+      box-shadow: 0 0 1px 1px rgba(230, 230, 230, 0.7);
   }
   
-  .header .first li a:hover,
-  .header .first li a:active {
-      color: #031ac8;
-      font-size: bolder;
-  }
-  
-  .header .first li:nth-last-child(1) a {
+  .arrow {
+      position: absolute;
+      z-index: 2;
+      top: -11px;
+      left: 43%;
       display: inline-block;
-      height: 25px;
-      line-height: 25px;
-      padding: 0 4px;
-      background: #398bfb;
-      font: '微软雅黑' 13px;
-      color: #fffcfe;
-  }
-
-  .sec{
-    display: none;
+      width: 0;
+      height: 0;
+      line-height: 0;
+      border: 5px dashed transparent;
+      border-bottom: 5px solid #e3e3e3;
+      font-size: 0;
   }
   
+  .arrow em {
+      position: absolute;
+      top: -4px;
+      left: -5px;
+      display: block;
+      width: 0 !important;
+      height: 0 !important;
+      line-height: 0;
+      font-size: 0;
+      color: #666;
+      border-top: 5px dashed transparent;
+      border-left: 5px dashed transparent;
+      border-right: 5px dashed transparent;
+      border-bottom: 5px solid #fff;
+  }
+  
+  .msg p {
+      width: 80%;
+      margin: 0 auto;
+      height: 88px;
+      border-bottom: 1px solid #e4e4e4;
+      text-align: center;
+      line-height: 88px;
+  }
+  
+  .msg button {
+      width: 82px;
+      height: 28px;
+      font-size: 12px;
+      line-height: 28px;
+      color: #fff;
+      margin-right: 10px;
+      margin-top: 10px;
+      border: 1px solid rgba(240, 240, 240, 0.8);
+  }
+  
+  .msg button:hover {
+      cursor: pointer;
+  }
+  
+  .msg .clear-msg {
+      margin-left: 10px;
+      background: #bcbcbc;
+  }
+  
+  .msg .msg-settings {
+      background-color: #389cff;
+  }
+  
+  .client {
+      display: none;
+  }
+  
+  .sett {
+      left: -8px;
+      display: none;
+  }
+  
+  .msg-box {
+      display: none;
+      left: -80px;
+      height: 139px;
+      width: 240px;
+  }
+  
+  .client li,
+  .sett li {
+      width: 60px;
+      list-style-type: none;
+      padding: 0 5px;
+      border-bottom: 1px solid #e4e4e4;
+  }
+  
+  .client li:hover,
+  .sett li:hover {
+      background-color: #398bfb;
+  }
+  
+  .client li a,
+  .sett li a {
+      text-decoration: none;
+      display: block;
+      color: #000;
+  }
+  
+  .client li:hover a,
+  .sett li:hover a {
+      color: #fff;
+  }
+  
+  .special {
+      z-index: 2;
+      width: 90px;
+      /*height:34px;*/
+  }
+  
+  .special>a {
+      display: block;
+      position: absolute;
+      width: 86px;
+      height: 36px;
+      line-height: 36px;
+      background-color: #398BFB;
+      text-align: center;
+      top: -25px;
+      right: -1px;
+  }
+  
+  .header .first .special>a:link,
+  .header .first .special>a:visited {
+      color: #fff;
+      text-decoration: none;
+  }
+  
+  .sec {
+      position: absolute;
+      background: #f9f9f9;
+      width: 90px;
+      height: 800px;
+      top: -34px;
+      padding-top: 15px;
+      border-left: 1px solid #eee;
+      display: none;
+  }
+  
+  .sec li {
+      list-style-type: none;
+      text-align: center;
+      border-bottom: 1px solid #e4e4e4;
+  }
+  
+  .special .sec li a {
+      color: #717171;
+      text-decoration: none;
+  }
+  
+  .special .sec li a:hover {
+      text-decoration: underline;
+  }
+  
+  .sec li a img {
+      display: block;
+      height: 36px;
+      width: auto;
+      margin: 10px auto 5px;
+      cursor: pointer;
+  }
+  /*END*/
   /*内容的开始，搜索框和button*/
+  
   .content,
   .logo {
       width: 100%;
@@ -90,10 +259,11 @@
   }
   
   input.keyWord:focus {
-      outline: 1px #398BFB solid;
+      outline: 2px #398BFB solid;
   }
-  input.keyWord:hover{
-    border: 1px #bbb solid;
+  
+  input.keyWord:hover {
+      border: 1px #bbb solid;
   }
   
   input.bto {
@@ -109,48 +279,79 @@
   .bto:hover,
   .bto:active {
       background: #3781f0;
+      cursor: pointer;
+  }
+  /*搜索框END*/
+  /*下部分导航开始*/
+  
+  .sub_container {
+      width: 900px;
+      margin: 60px auto;
+      border: 1px solid #ccc;
+  }
+  /*子导航栏的开始*/
+  
+  .sub_container .sub_menu {
+      border-bottom: 1px solid #ccc;
+      height: 40px;
+      font-size: 14px;
+      color: #000;
   }
   
-  /*footer start*/
-  .footer {
-      width: 100%;
-      position: absolute;
-      bottom: 30px!important;
-      font-size: 12px;
+  .sub_menu .first-sub-menu li span {
+      line-height: 40px;
   }
   
-  .ft1 {
-      width: 270px;
-      margin: 0 auto;
-      padding-bottom: 8px;
+  .sub_menu .first-sub-menu li {
+      list-style-type: none;
+      float: left;
+      width: 80px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+  }
+  
+  .sub_menu .first-sub-menu .ssub-menu {
+      float: left;
+      height: 40px;
+      width: 124px;
       text-align: center;
   }
+  /*这个是第一个加icon的效果样式*/
   
-  .ft1 a:link,
-  .ft1 a:visited {
-      color: #031ac8;
-      padding: 0px 7px;
+  .sub_menu .first-sub-menu li .client_icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: url(../img/index_widthlg.png) no-repeat -39px -130px;
+      vertical-align: middle;
+  }
+  /*导航栏中active的样式*/
+  
+  .submenu_active {
+      background: #9a9da2;
+      color: #fff;
+      cursor: pointer;
   }
   
-  .ft2 {
-      width: 350px;
-      margin: 0 auto;
-      color: #666;
-      text-align: center;
+  .sub_menu .first-sub-menu li:not(.submenu_active):hover {
+      background: #b3b6bb;
+      color: #fff;
+      cursor: pointer;
   }
   
-  .ft1 a,
-  .ft2 a {
-      text-decoration: underline;
+  .sub_menu .last-sub-menu {
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+      margin: 10px 23px 10px auto;
+      float: right;
+      background: url(../img/index_widthlg.png) no-repeat -349px -132px;
   }
   
-  .ft2 a:link,
-  .ft2 a:visited {
-      color: #666;
-      padding: 0px 2px;
+  .sub_menu .last-sub-menu:hover {
+      cursor: pointer;
+      background: url(../img/index_widthlg.png) no-repeat -349px -157px;
   }
+  /*子导航栏的结束*/
   
-  .footer p img {
-      vertical-align: bottom;
-      padding-left: 5px;
-  }
