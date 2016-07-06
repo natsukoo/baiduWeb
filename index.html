@@ -1,14 +1,23 @@
 <!DOCTYPE HTML>
+
 <head>
     <meta charset="utf-8" />
     <title>百度一下，你就知道</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="css/iestyle.css" />
+    <![endif]-->
+    <!--[if IE 6]>
+    <style>
+    body {behavior: url("css/csshover.htc");}
+    </style>
+    <![endif]-->
 </head>
 
 <body>
     <div class="container">
-    <!--head-->
-        <header>
+        <!--head-->
+        <div class="header">
             <ul class="first">
                 <li><a href="http://www.nuomi.com/?cid=002540" target="_blank">糯米</a></li>
                 <li><a href="http://news.baidu.com" target="_blank">新闻</a></li>
@@ -18,25 +27,36 @@
                 <li><a href="http://tieba.baidu.com" target="_blank">贴吧</a></li>
                 <li><a href="#">登陆</a></li>
                 <li><a href="#">设置</a></li>
-                <li><a href="#"><span>更多产品</span></a>
+                <li class="special"><a href="#"><span>更多产品</span></a>
                     <ul class="sec">
-                        <li><a href="http://music.baidu.com/" target="_blank"><img src="img/music.png" />音乐</a></li>
-                        <li><a href="http://image.baidu.com/" target="_blank"><img src="img/image.png" />图片</a></li>
-                        <li><a href="http://zhidao.baidu.com/" target="_blank"><img src="img/zhidao.png" />知道</a></li>
-                        <li><a href="http://wenku.baidu.com/" target="_blank"><img src="img/wenku.png" />文库</a></li>
-                        <li><a href="http://top.baidu.com/" target="_blank"><img src="img/bang.png" />风云榜</a></li>
-                        <li><a href="http://e.baidu.com/" target="_blank"><img src="img/tuiguang.png" />百度推广</a></li>
+                        <li>
+                            <a href="http://music.baidu.com/" target="_blank"><img src="img/music.png" />音乐</a>
+                        </li>
+                        <li>
+                            <a href="http://image.baidu.com/" target="_blank"><img src="img/image.png" />图片</a>
+                        </li>
+                        <li>
+                            <a href="http://zhidao.baidu.com/" target="_blank"><img src="img/zhidao.png" />知道</a>
+                        </li>
+                        <li>
+                            <a href="http://wenku.baidu.com/" target="_blank"><img src="img/wenku.png" />文库</a>
+                        </li>
+                        <li>
+                            <a href="http://top.baidu.com/" target="_blank"><img src="img/bang.png" />风云榜</a>
+                        </li>
+                        <li>
+                            <a href="http://e.baidu.com/" target="_blank"><img src="img/tuiguang.png" />百度推广</a>
+                        </li>
                         <li><a href="http://www.baidu.com/more/" target="_blank">全部产品>></a></li>
                     </ul>
                 </li>
             </ul>
-        </header>
+        </div>
         <!--end head-->
-
         <!--content-->
         <div class="content">
             <div class="logo">
-                <img src="img/baidulogo.png" alt="百度logo" />
+                <img src="img/bdlogo.png" alt="百度logo" />
             </div>
             <div class="form">
                 <form>
@@ -46,9 +66,8 @@
             </div>
         </div>
         <!--end content-->
-
         <!--footer-->
-        <footer>
+        <div class="footer">
             <p class="ft1">
                 <span><a href="#">把百度设为主页</a> </span>
                 <span><a href="#">关于百度</a></span>
@@ -60,7 +79,7 @@
                 <a href="#">意见反馈</a> 京ICP证030173号
                 <img src="img/copy_rignt_24.png" />
             </p>
-        </footer>
+        </div>
         <!--end footer-->
     </div>
 </body>

@@ -1,147 +1,156 @@
-            * {
-                margin: 0;
-                padding: 0;
-            }
-            
-            body,
-            .container {
-                height: 100%;
-                width: 100%;
-                position: relative;
-                min-height: 600px;
-                min-width: 810px;
-                background:#ffffff;
-            }
-            
-            .heading {
-                height: 70px;
-            }
-            
-            .heading ul {
-                margin-top: 15px;
-                margin-right: 10px;
-                float: right;
-                list-style-type: none;
-            }
-            
-            .heading ul li {
-                padding-left: 15px;
-                display: inline-block;
-                font-size: 13px;
-                font-weight: bold;
-            }
-            
-            .heading ul li a:link,
-            .heading ul li a:visited {
-                color: #333333;
-            }
-            
-            .heading ul li a:hover,
-            .heading ul li a:active {
-                color: #031ac8;
-                font-size: bolder;
-            }
-            
-            .heading ul li:nth-last-child(1) a {
-                display: inline-block;
-                height: 25px;
-                line-height: 25px;
-                padding: 0 4px;
-                background: #398bfb;
-                font: '微软雅黑' 13px;
-                color: #fffcfe;
-            }
-            
-            .content,
-            .logo {
-                width: 100%;
-            }
-            
-            .logo img {
-                display: block;
-                border: none;
-                height: 129px;
-                width: 270px;
-                margin: 20px auto 0 auto;
-            }
-            
-            form {
-                width: 650px;
-                height: 35px;
-                margin: 0 auto auto auto;
-                padding:0;
-                vertical-align:center;
-            }
-            
-            input.keyWord {
-                width: 530px;
-                height: 29px;
-                padding: 2px 5px;
-                border: 1px #cccccc solid;
-                background-color:inherit;
-                font-size:16px;
-                vertical-align:center;
-            }
-            
-            input.keyWord:focus {
-                border: 1px #398BFB solid;
-            }
-            
-            input.bto {
-                width: 106px;
-                height: 35px;
-                border:none;
-                margin-left:-4px;
-                background: #398BFB;
-                font-size: 16px;
-                /*white-space:0.4em;*/
-                color: #ffffff;
-                
-            }
-            .bto:hover,
-            .bto:active {
-                background: #3781f0;
-            }
-            
-            .footer {
-                width: 100%;
-                position: absolute;
-                bottom: 30px;
-                font-size: 12px;
-            }
-            
-            .ft1 {
-                width: 270px;
-                margin: 0 auto;
-                padding-bottom: 8px;
-                text-align: center;
-            }
-            
-            .ft1 a:link,
-            .ft1 a:visited {
-                color: #031ac8;
-                padding: 0px 7px;
-            }
-            
-            .ft2 {
-                width: 350px;
-                margin: 0 auto;
-                color: #666666;
-                text-align: center;
-            }
-            
-            .ft1 a,
-            .ft2 a {
-                text-decoration: underline;
-            }
-            
-            .ft2 a:link,
-            .ft2 a:visited {
-                color: #666666;
-                padding: 0px 2px;
-            }
-            
-            .footer p img {
-                vertical-align: bottom;
-                padding-left: 5px;
-            }
+  * {
+      margin: 0;
+      padding: 0;
+  }
+  
+  body,
+  .container {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      min-height: 600px;
+      min-width: 810px;
+      background: #ffffff;
+  }
+  /*header*/
+  .header {
+      height: 70px;
+  }
+  
+  .header .first {
+      margin-top: 15px;
+      margin-right: 10px;
+      float: right;
+      list-style-type: none;
+  }
+  
+  .header .first li {
+      padding-left: 15px;
+      display: inline-block;
+      font-size: 13px;
+      font-weight: bold;
+  }
+  
+  .header .first li a:link,
+  .header .first li a:visited {
+      color: #333333;
+  }
+  
+  .header .first li a:hover,
+  .header .first li a:active {
+      color: #031ac8;
+      font-size: bolder;
+  }
+  
+  .header .first li:nth-last-child(1) a {
+      display: inline-block;
+      height: 25px;
+      line-height: 25px;
+      padding: 0 4px;
+      background: #398bfb;
+      font: '微软雅黑' 13px;
+      color: #fffcfe;
+  }
+
+  .sec{
+    display: none;
+  }
+  
+  /*内容的开始，搜索框和button*/
+  .content,
+  .logo {
+      width: 100%;
+  }
+  
+  .logo img {
+      display: block;
+      border: none;
+      height: 129px;
+      width: 270px;
+      margin: 20px auto 0 auto;
+  }
+  
+  .form {
+      width: 650px;
+      height: 35px;
+      margin: 0 auto;
+      padding: 0;
+      vertical-align: center;
+  }
+  
+  input.keyWord {
+      width: 530px;
+      height: 29px;
+      float: left;
+      padding: 2px 5px;
+      border: 1px #ccc solid;
+      background-color: inherit;
+      font-size: 16px;
+      vertical-align: center;
+  }
+  
+  input.keyWord:focus {
+      outline: 1px #398BFB solid;
+  }
+  input.keyWord:hover{
+    border: 1px #bbb solid;
+  }
+  
+  input.bto {
+      width: 106px;
+      height: 35px;
+      border: none;
+      float: left;
+      background: #398BFB;
+      font-size: 16px;
+      color: #ffffff;
+  }
+  
+  .bto:hover,
+  .bto:active {
+      background: #3781f0;
+  }
+  
+  /*footer start*/
+  .footer {
+      width: 100%;
+      position: absolute;
+      bottom: 30px!important;
+      font-size: 12px;
+  }
+  
+  .ft1 {
+      width: 270px;
+      margin: 0 auto;
+      padding-bottom: 8px;
+      text-align: center;
+  }
+  
+  .ft1 a:link,
+  .ft1 a:visited {
+      color: #031ac8;
+      padding: 0px 7px;
+  }
+  
+  .ft2 {
+      width: 350px;
+      margin: 0 auto;
+      color: #666;
+      text-align: center;
+  }
+  
+  .ft1 a,
+  .ft2 a {
+      text-decoration: underline;
+  }
+  
+  .ft2 a:link,
+  .ft2 a:visited {
+      color: #666;
+      padding: 0px 2px;
+  }
+  
+  .footer p img {
+      vertical-align: bottom;
+      padding-left: 5px;
+  }
